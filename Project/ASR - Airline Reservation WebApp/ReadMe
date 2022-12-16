@@ -1,6 +1,10 @@
 Setup in VENV
+
 cd /PycharmProjects/Fantastic-Four/Project/ASR - Airline Reservation WebApp
 python3 -m venv venv
 . venv/scripts/activate
 pip install flask flask-sqlalchemy flask-login
 
+export FLASK_APP=app
+export FLASK_DEBUG=1
+flask run
