@@ -22,10 +22,10 @@ def signup_post():
     user = User.query.filter_by(username=username).first()
 
     if user:
-        flash('Email address or Username already exists')
+        flash('Email address or Username already exists. Try Again.')
         return redirect(url_for('auth.signup'))
 
-    new_user = User(username=username, name=name, password=generate_password_hash(password, method='sha256'))
+    new_user = User(username=username, email=email, name=name, password=generate_password_hash(password, method='sha256'))
 
     db.session.add(new_user)
     db.session.commit()

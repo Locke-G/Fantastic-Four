@@ -7,7 +7,7 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
 
-    app.config['SECRET_KEY'] = 'secret-key-goes-here'
+    app.config['SECRET_KEY'] = 'Secret-Key-On-Todo-List'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///LoginData.db'
 
     db.init_app(app)
