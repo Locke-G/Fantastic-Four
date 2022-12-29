@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for, request, flash
+from flask import Blueprint, render_template, redirect, url_for, request, flash, session
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, logout_user, login_required
 from .models import User
@@ -16,6 +16,7 @@ def login_post():
     password = request.form.get('password')
     remember = True if request.form.get('remember') else False
 
+    session.permanent = True
     user = User.query.filter_by(email=email).first()
 
     # check if user actually exists
@@ -43,14 +44,14 @@ def signup_post():
 
     # if this returns a userERx, then the email
     # or username already exists in database
-    userER1 = User.query.filter_by(email=email).first()
-    userER2 = User.query.filter_by(username=username).first()
+    userer1 = User.query.filter_by(email=email).first()
+    userer2 = User.query.filter_by(username=username).first()
 
-    if userER1: # if an email is found, we want to redirect back to signup
+    if userer1: # if an email is found, we want to redirect back to signup
         flash('Email address already exists. Try again.')
         return redirect(url_for('auth.signup'))
 
-    if userER2: # if a user is found, we want to redirect back to signup
+    if userer2: # if a user is found, we want to redirect back to signup
         flash('Username already exists. Try again.')
         return redirect(url_for('auth.signup'))
 
@@ -70,3 +71,8 @@ def signup_post():
 def logout():
     logout_user()
     return redirect(url_for('main.index'))
+
+@auth.route('/book', method=['GET', 'POST'])
+@login_required
+def book():
+    return render_template('book.html')
