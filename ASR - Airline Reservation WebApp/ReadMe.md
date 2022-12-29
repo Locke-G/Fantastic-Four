@@ -1,8 +1,9 @@
 # ReadMe
 ## _ASR - Airplain Reservation WebApp_
 
-This Web application is build upon Flask Framework in Python  and is part of the Final Project for the Lecture
-Programming for Data Scientists: Python in Georg-August-Universität Göttingen.
+This Web application is build upon Flask Framework in Python  and is part
+of the Final Project for the Lecture _Programming for Data Scientists: Python_
+in Georg-August-Universität Göttingen.
 
 ## Features
 
@@ -13,13 +14,29 @@ Programming for Data Scientists: Python in Georg-August-Universität Göttingen.
 
 # Build the application
 
-### Step 1 - Create virtual envirment
+### Step 1 - Clone the application
 
 ```sh
+$ # git clone https://github.com/...
+$ cd ASR\ -\ Airline\ Reservation\ WebApp/Project/
+```
+
+### Step 2 - Create virtual environment
+
+ ```sh
 $ pyhton3 -m venv auth
 $ source auth/bin/activate
+ ```
+
+### Step 3 - Install the required packages
+
+ ```sh
+ $ pip install -r requirements.txt
+ ```
+
+### Step 4 - Set Up the virtual environment
+```sh
 $ export FLASK_APP=app
+$ #Add debugger if required
 $ export FLASK_DEBUG=1
-
-
 ```
