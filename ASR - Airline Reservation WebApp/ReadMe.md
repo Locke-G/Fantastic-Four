@@ -5,6 +5,12 @@ This Web application is build upon Flask Framework in Python  and is part
 of the Final Project for the Lecture _Programming for Data Scientists: Python_
 in Georg-August-Universität Göttingen.
 
+## Goals
+
+- A realtional database for data storage 
+- A web-based frontend
+- A computing backend implemented in Python
+
 ## Features
 
 - Reading the seat chart from an txt file and displaying them
