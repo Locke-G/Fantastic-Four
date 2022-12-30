@@ -23,7 +23,7 @@ in Georg-August-Universität Göttingen.
 ### Step 1 - Clone the application
 
 ```sh
-$ # git clone https://github.com/...
+$ # git clone https://github.com/Locke-G/Fantastic-Four.git
 $ cd ASR\ -\ Airline\ Reservation\ WebApp/Project/
 ```
 
