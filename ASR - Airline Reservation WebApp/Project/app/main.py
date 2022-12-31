@@ -10,4 +10,9 @@ def index():
 @main.route('/profile')
 @login_required
 def profile():
-    return render_template('profile.html', name=current_user.name)
+    return render_template('booking/profile.html', name=current_user.name)
+
+#@auth.route('/book', methods=['POST'])
+#@login_required
+#def book():
+#    return render_template('booking/book.html')
