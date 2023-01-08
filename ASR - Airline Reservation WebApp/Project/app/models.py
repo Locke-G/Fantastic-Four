@@ -9,12 +9,18 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(100))
     name = db.Column(db.String(1000))
 
-#class Inputdata(db.Model):
-#    row_num = db.Column(db.Integer, primary_key=True)
-#    wind_A = db.Column(db.String(1), notnull=True)
-#    midd_B = db.Column(db.String(1), notnull=True)
-#    aisl_C = db.Column(db.String(1), notnull=True)
-#    aisl_D = db.Column(db.String(1), notnull=True)
-#    midd_E = db.Column(db.String(1), notnull=True)
-#    wind_F = db.Column(db.String(1), notnull=True)
+class Seatchart(db.Model):
+    __tablename__ ='seatchart'
+    id = db.Column(db.Integer, primary_key=True)
+    column1 = db.Column(db.String(5))
+    column2 = db.Column(db.String(5))
+    column3 = db.Column(db.String(5))
+    column4 = db.Column(db.String(5))
+    column5 = db.Column(db.String(5))
+    column6 = db.Column(db.String(5))
+
+#class Reservation(db.Model):
+#    id = db.Column(db.Integer, primary_key=True)
+#    name = db.Column(db.String(20), nullable=False)
+#    seat_number = db.Column(db.Integer, nullable=False)
 

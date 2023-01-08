@@ -8,7 +8,7 @@ with open('chartIn.txt') as f:
         data_lists = file_data[i].replace('F\n', 'F').split("\t")
         data_tuple = tuple(data_lists)
         data_list.append(data_tuple)
-print(data_list)
+print(data_lists)
 
 # create empty database
 connection = sqlite3.connect('df.db')
