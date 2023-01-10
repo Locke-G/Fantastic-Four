@@ -1,7 +1,7 @@
 # ReadMe
 ## _ASR - Airplain Reservation WebApp_
 
-This Web application is build upon Flask Framework in Python  and is part
+This Web application is build upon the Flask Framework in Python  and is part
 of the Final Project for the Lecture _Programming for Data Scientists: Python_
 in Georg-August-Universität Göttingen.
 
@@ -23,7 +23,7 @@ in Georg-August-Universität Göttingen.
 ### Step 1 - Clone the application
 
 ```sh
-$ # git clone https://github.com/Locke-G/Fantastic-Four.git
+$ git clone https://github.com/Locke-G/Fantastic-Four.git
 $ cd ASR\ -\ Airline\ Reservation\ WebApp/Project/
 ```
 
@@ -31,7 +31,10 @@ $ cd ASR\ -\ Airline\ Reservation\ WebApp/Project/
 
  ```sh
 $ pyhton3 -m venv auth
+$ # when on linux or mac OS 
 $ source auth/bin/activate
+$ # when on windows 
+$ ./auth/Scripts/activate
  ```
 
 ### Step 3 - Install the required packages
@@ -40,9 +43,13 @@ $ source auth/bin/activate
  $ pip install -r requirements.txt
  ```
 
-### Step 4 - Set Up the virtual environment
+### Step 4 - Create the virtual environment
 ```sh
 $ export FLASK_APP=app
 $ #Add debugger if required
 $ export FLASK_DEBUG=1
+```
+### Step 5 - Run the application
+```sh
+$ flask run
 ```

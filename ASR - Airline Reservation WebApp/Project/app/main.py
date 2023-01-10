@@ -2,10 +2,9 @@ from flask import Blueprint, Flask, render_template, request, redirect
 from flask_login import login_required, current_user
 from werkzeug.utils import secure_filename
 from . import db
-from .models import Seatchart
+import pandas as pd
 
 main = Blueprint('main', __name__)
-
 
 @main.route('/')
 def index():
@@ -28,20 +27,23 @@ def uploadseatfile():
         if file.filename == '':
             return redirect(url_for('upload'))
 
-        # Read the contents of the file and parse it into a list of values
-        lines = file.readlines()
-        values = []
-        for line in lines:
-            parts = line.strip().split('\t')
-            values.append(
-                Seatchart(column1=parts[0], column2=parts[1], column3=parts[2],
-                          column4=parts[3], column5=parts[4],column6=parts[5]))
+            # Read the contents of the file into a DataFrame using pandas
+            df = pd.read_csv(file, delimiter='\t')
 
-        # Add the values to the database
-        session = Session()
-        session.add_all(values)
-        session.commit()
-        session.close()
-        return 'Seat chart data added to database!'
+            # Obtain the filename of the uploaded file
+            filename = secure_filename(file.filename)
+
+            # Extract the name of the file and remove the file extension
+            table_name = filename.split(".")[0]
+
+            # Save the DataFrame to a SQL table in the database with the name of the file
+            df.to_sql(table_name, db.engine)
+            return f'Data of {table_name} added to the database!'
     return render_template('booking/upload.html')
+
+@main.errorhandler(413)
+def file_too_large(e):
+    return "File too large", 413
+
+
 

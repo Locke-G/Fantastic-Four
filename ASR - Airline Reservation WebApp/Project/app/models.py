@@ -1,6 +1,5 @@
 from flask_login import UserMixin
 from . import db
-
 class User(UserMixin, db.Model):
     # primary keys are required by SQLAlchemy
     id = db.Column(db.Integer, primary_key=True)
@@ -9,18 +8,9 @@ class User(UserMixin, db.Model):
     password = db.Column(db.String(100))
     name = db.Column(db.String(1000))
 
-class Seatchart(db.Model):
-    __tablename__ ='seatchart'
+class Seat(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    column1 = db.Column(db.String(5))
-    column2 = db.Column(db.String(5))
-    column3 = db.Column(db.String(5))
-    column4 = db.Column(db.String(5))
-    column5 = db.Column(db.String(5))
-    column6 = db.Column(db.String(5))
-
-#class Reservation(db.Model):
-#    id = db.Column(db.Integer, primary_key=True)
-#    name = db.Column(db.String(20), nullable=False)
-#    seat_number = db.Column(db.Integer, nullable=False)
-
+    seat_id = db.Column(db.String(10), unique=True)
+    row = db.Column(db.String(10))
+    column = db.Column(db.String(10))
+    status = db.Column(db.String(10))
