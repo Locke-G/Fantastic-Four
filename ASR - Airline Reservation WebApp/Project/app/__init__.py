@@ -14,7 +14,7 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
     app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=10)
     app.config['UPLOAD_EXTENSIONS'] = ['.txt']
-    app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
+    app.config['MAX_CONTENT_LENGTH'] = 4096
     db.init_app(app)
 
     # If access is unauthorized it will redirect you to the loginpage
