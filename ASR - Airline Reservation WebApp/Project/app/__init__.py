@@ -13,14 +13,22 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
     app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=10)
-    app.config['UPLOAD_EXTENSIONS'] = ['.txt']
-    app.config['MAX_CONTENT_LENGTH'] = 4096
+    #app.config['UPLOAD_EXTENSIONS'] = ['.txt']
+    #app.config['MAX_CONTENT_LENGTH'] = 4096
     db.init_app(app)
 
     # If access is unauthorized it will redirect you to the loginpage
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
     login_manager.init_app(app)
+
+    # Populate the database with data from a .txt file
+    with app.app_context():
+        file_path = 'data/.txt'
+        data = pd.read_csv(file_path, delimiter=' ')
+        table_name = file_path.split(".")[0]
+        data.to_sql(table_name, con=db.engine)
+    return app
 
     from .models import User
 
