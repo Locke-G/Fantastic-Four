@@ -1,8 +1,9 @@
 import os
-from flask import Blueprint, Flask, render_template, request, redirect, flash, url_for
+from flask import Blueprint, Flask, render_template, request, redirect, flash, url_for, jsonify
 from flask_login import login_required, current_user
 from .models import Seat
 from . import db
+
 
 main = Blueprint('main', __name__)
 
@@ -28,14 +29,16 @@ def upload():
             return redirect(request.url)
 
         # Check file extension
-        if not file or '.' not in file.filename or file.filename.rsplit('.', 1)[1].lower() not in app.config['ALLOWED_EXTENSIONS']:
-            flash('File type not supported')
-            return redirect(request.url)
+        # not working cannot import app error
+        #if not file or '.' not in file.filename or file.filename.rsplit('.', 1)[1].lower() not in app.config['ALLOWED_EXTENSIONS']:
+        #    flash('File type not supported')
+        #    return redirect(request.url)
 
         # Check file size
-        if file.content_length > app.config['MAX_CONTENT_LENGTH']:
-            flash('File size exceeded')
-            return redirect(request.url)
+        # not working cannot import app error
+        #if file.content_length > app.config['MAX_CONTENT_LENGTH']:
+        #    flash('File size exceeded')
+        #    return redirect(request.url)
 
         # Save the file
         file = request.files['file']
@@ -55,4 +58,27 @@ def upload():
         return redirect(url_for('main.upload'))
     return render_template('booking/upload.html')
 
+@main.route('/select_airline', methods=['GET'])
+def select_airline():
+    airlines = db.session.query(Seat.airline).distinct()
+    seats = Seat.query.all()
+    return render_template('booking/select_airline.html', airlines=airlines, seats=seats)
 
+@main.route('/get_seats', methods=['GET'])
+def get_seats():
+    airline = request.args.get("airline")
+    seats = Seat.query.filter_by(airline=airline).all()
+    return jsonify(seats=[seat.serialize() for seat in seats])
+
+@main.route('/reserve_seat', methods=['POST'])
+def reserve_seat():
+    data = request.get_json()
+    seat_id = data.get('seatId')
+    seat = Seat.query.filter_by(seat_id=seat_id).first()
+    if seat is None:
+        return jsonify(success=False, message='Seat not found')
+    if seat.status != 'available':
+        return jsonify(success=False, message='Seat is not available')
+    seat.status = 'reserved'
+    db.session.commit()
+    return jsonify(success=True)

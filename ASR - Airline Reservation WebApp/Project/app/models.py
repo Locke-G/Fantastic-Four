@@ -13,3 +13,9 @@ class Seat(db.Model):
     airline = db.Column(db.String(10))
     seat_id = db.Column(db.String(10))
     status = db.Column(db.String(10))
+    def serialize(self):
+        return {
+            'seat_id': self.seat_id,
+            'status': self.status,
+            'airline': self.airline
+        }
