@@ -1,10 +1,8 @@
+import os
 from flask import Blueprint, Flask, render_template, request, redirect, flash, url_for
 from flask_login import login_required, current_user
-from werkzeug.utils import secure_filename
+from .models import Seat
 from . import db
-from .models import Seat, User
-import sys
-import pandas as pd
 
 main = Blueprint('main', __name__)
 
@@ -17,40 +15,44 @@ def index():
 def profile():
     return render_template('booking/profile.html', name=current_user.name)
 
-# Debug logging hiinzufügen
 @main.route('/upload', methods=['GET', 'POST'])
 @login_required
 def upload():
     if request.method == 'POST':
-        # Get the file from the form input
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
         file = request.files['file']
-        # Check if the file is of a valid type
-        if not file or not allowed_file(file.filename):
-            flash('Invalid file format. Please upload a .txt file')
-            return redirect(url_for('main.upload'))
-        # Save the file to the server
-        filename = secure_filename(file.filename)
-        file.save('' + filename)
-        # Read the file into a pandas dataframe
-        data = pd.read_csv('' + filename, delimiter=' ')
-        flash(data.to_string())
-        # Iterate through the dataframe, creating Seat objects and adding them to the database
-        for i, row in data.iterrows():
-            print(row, file=sys.stderr)
-            seat_id = row['row'] + row['column']
-            seat = Seat(seat_id=seat_id, row=row['row'], column=row['column'], status='available')
-            db.session.add(seat)
-        db.session.commit()
-        flash('File uploaded and data stored in database')
-        return redirect(url_for('main.index'))
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+
+        # Check file extension
+        if not file or '.' not in file.filename or file.filename.rsplit('.', 1)[1].lower() not in app.config['ALLOWED_EXTENSIONS']:
+            flash('File type not supported')
+            return redirect(request.url)
+
+        # Check file size
+        if file.content_length > app.config['MAX_CONTENT_LENGTH']:
+            flash('File size exceeded')
+            return redirect(request.url)
+
+        # Save the file
+        file = request.files['file']
+        if file:
+            filename = file.filename
+            root, ext = os.path.splitext(filename)
+            file.seek(0)
+            lines = file.read().decode().split("\n")
+            for i, line in enumerate(lines[1:]):
+                cells = line.strip().split("\t")
+                for j, cell in enumerate(cells[1:]):
+                    seat_id = str(i + 1) + chr(ord('A') + j)
+                    seat = Seat(seat_id=seat_id, status='available', airline=root)
+                    db.session.add(seat)
+            db.session.commit()
+        flash('File uploaded and processed')
+        return redirect(url_for('main.upload'))
     return render_template('booking/upload.html')
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in 'txt'
-
-
-@main.errorhandler(413)
-def file_too_large(e):
-    return "File too large", 413
-
 
 

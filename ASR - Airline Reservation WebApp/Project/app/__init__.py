@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
@@ -6,29 +7,23 @@ from datetime import timedelta
 # init SQLAlchemy so we can use it later in our models
 db = SQLAlchemy()
 
-
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'Wr5U92$&*68VoD29vbm4i!#m3#%&vq62@5UPN958%H!%f'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
     app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=10)
-    #app.config['UPLOAD_EXTENSIONS'] = ['.txt']
-    #app.config['MAX_CONTENT_LENGTH'] = 4096
+    app.config['SQLALCHEMY_POOL_SIZE'] = 5
+    app.config['ALLOWED_EXTENSIONS'] = {'txt'}
+    app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
     db.init_app(app)
+
 
     # If access is unauthorized it will redirect you to the loginpage
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
     login_manager.init_app(app)
 
-    # Populate the database with data from a .txt file
-    with app.app_context():
-        file_path = 'data/.txt'
-        data = pd.read_csv(file_path, delimiter=' ')
-        table_name = file_path.split(".")[0]
-        data.to_sql(table_name, con=db.engine)
-    return app
 
     from .models import User
 

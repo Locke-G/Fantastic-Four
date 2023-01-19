@@ -10,7 +10,6 @@ class User(UserMixin, db.Model):
 
 class Seat(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    seat_id = db.Column(db.String(10), unique=True)
-    row = db.Column(db.String(10))
-    column = db.Column(db.String(10))
+    airline = db.Column(db.String(10))
+    seat_id = db.Column(db.String(10))
     status = db.Column(db.String(10))
