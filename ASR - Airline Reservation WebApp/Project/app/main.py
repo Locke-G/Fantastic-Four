@@ -1,5 +1,5 @@
 import os
-from flask import Blueprint, Flask, render_template, request, redirect, flash, url_for, jsonify
+from flask import Blueprint,render_template, request, redirect, flash, url_for, jsonify
 from flask_login import login_required, current_user
 from .models import Seat, User
 from . import db
@@ -54,30 +54,32 @@ def upload():
     return render_template('booking/upload.html')
 
 
-#not working as intended
-@main.route('/select_airline', methods=['GET'])
+@main.route('/select_airline', methods=['GET', 'POST'])
 def select_airline():
+    if request.method == 'POST':
+        selected_airline = request.form.get('airline_select')
+        seats = Seat.query.filter_by(airline=selected_airline).all()
+        max_row = max(seat.row for seat in seats)
+        max_col = max(ord(seat.column) - ord('A') for seat in seats)
+        seat_chart = [['' for _ in range(max_col+1)] for _ in range(max_row+1)]
+        for seat in seats:
+            seat_chart[seat.row-1][ord(seat.column) - ord('A')] = seat.seat_id
+    else:
+        selected_airline = db.session.query(Seat.airline).distinct().first()[0]
+        seats = Seat.query.filter(Seat.airline == selected_airline).all()
+        max_row = max(seat.row for seat in seats)
+        max_col = max(ord(seat.column) - ord('A') for seat in seats)
+        #TypeError: can only concatenate str (not "int") to str
+        seat_chart = [['' for _ in range(max_col+1)] for _ in range(max_row+1)]
+        for seat in seats:
+            seat_chart[seat.row-1][ord(seat.column) - ord('A')] = seat.seat_id
+
     airlines = db.session.query(Seat.airline).distinct()
-    #seats = Seat.query.all()
-    return render_template('booking/select_airline.html', airlines=airlines, seats=seats)
+    return render_template(
+        'booking/select_airline.html',
+        airlines=airlines,
+        seat_chart=seat_chart,
+        selected_airline=selected_airline
+    )
 
-#not working as intended
-@main.route('/get_seats', methods=['GET'])
-def get_seats():
-    airline = request.args.get("airline")
-    seats = Seat.query.filter_by(airline=airline).all()
-    return jsonify(seats=[seat.serialize() for seat in seats])
 
-#not working as intended
-@main.route('/reserve_seat', methods=['POST'])
-def reserve_seat():
-    data = request.get_json()
-    seat_id = data.get('seatId')
-    seat = Seat.query.filter_by(seat_id=seat_id).first()
-    if seat is None:
-        return jsonify(success=False, message='Seat not found')
-    if seat.status == 'reserved':
-        return jsonify(success=False, message='Seat is not available')
-    seat.status = 'reserved'
-    db.session.commit()
-    return jsonify(success=True)
