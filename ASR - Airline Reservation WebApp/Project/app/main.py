@@ -76,8 +76,6 @@ def seats():
         columns = []
     return render_template('booking/seats.html', airlines=airlines, seats=seats, rows=rows, columns=columns)
 
-
-
 import logging
 
 logging.basicConfig(filename='app.log', level=logging.DEBUG)

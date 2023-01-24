@@ -287,3 +287,19 @@ INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:45:19] "POST /seats HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:46:26] "GET /seats HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:46:34] "POST /seats HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:46:37] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:50:36] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:53:56] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:53:56] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:54:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:54:50] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:54:52] "GET /upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:54:57] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jan/2023 18:57:51] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 297-374-660
