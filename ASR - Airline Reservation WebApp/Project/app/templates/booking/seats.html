@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="post">
+    <label for="airline">Airline:</label>
+    <select id="airline" name="airline">
+        {% for airline in airlines %}
+            <option value="{{ airline[0] }}">{{ airline[0] }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Filter">
+    </form>
+    <table>
+    {% for i in rows %}
+        <tr>
+            {% for j in columns %}
+                <td>{{i[0]}}{{j[0]}}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
