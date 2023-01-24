@@ -65,16 +65,26 @@ def upload():
 def seats():
     airlines = db.session.query(Seat.airline).distinct().all()
     if request.method == 'POST':
-        airline = request.form.get('airline')
-        seats = Seat.query.filter_by(airline=airline).all()
-        rows = db.session.query(Seat.row).distinct().filter_by(airline=airline).all()
-        columns = db.session.query(Seat.column).distinct().filter_by(airline=airline).all()
+        airline = \
+            request.form.get('airline')
+        seats = \
+            Seat.query.filter_by(airline=airline).all()
+        rows = \
+            db.session.query(Seat.row).distinct().filter_by(airline=airline).all()
+        columns = \
+            db.session.query(Seat.column).distinct().filter_by(airline=airline).all()
     else:
         airlines = db.session.query(Seat.airline).distinct().all()
         seats = []
         rows = []
         columns = []
-    return render_template('booking/seats.html', airlines=airlines, seats=seats, rows=rows, columns=columns)
+    return render_template(
+        'booking/seats.html',
+        airlines=airlines,
+        seats=seats,
+        rows=rows,
+        columns=columns
+    )
 
 import logging
 
@@ -85,8 +95,3 @@ logging.debug('This is a debug message')
 logging.info('This is an info message')
 logging.warning('This is a warning message')
 logging.error('This is an error message')
-
-
-
-
-
