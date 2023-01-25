@@ -11,12 +11,30 @@
     <input type="submit" value="Filter">
     </form>
     <table>
-    {% for i in rows %}
-        <tr>
-            {% for j in columns %}
-                <td>{{i[0]}}{{j[0]}}</td>
-            {% endfor %}
-        </tr>
-    {% endfor %}
+        {% for i in rows %}
+            <tr>
+                {% for j in columns %}
+                    <td>
+                        <div class="seat {% if reserved_seats.get(i[0]+j[0]) == 'reserved' %}reserved{% endif %}" id="{{i[0]}}{{j[0]}}">{{i[0]}}{{j[0]}}</div>
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
     </table>
+    <form method="post">
+        <input type="hidden" id="selectedSeat" name="selectedSeat" value="null">
+        <input type="submit" value="Confirm Selection">
+    </form>
+    <script>
+        const seats = document.querySelectorAll('.seat');
+        const selectedSeat = document.getElementById('selectedSeat');
+
+        seats.forEach(seat => {
+            seat.addEventListener('click', event => {
+                seats.forEach(seat => seat.classList.remove('selected'));
+                event.target.classList.add('selected');
+                selectedSeat.value = event.target.id;
+            });
+        });
+    </script>
 {% endblock %}

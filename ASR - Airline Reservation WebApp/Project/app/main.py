@@ -59,32 +59,38 @@ def upload():
         return redirect(url_for('main.upload'))
     return render_template('booking/upload.html')
 
-
 @main.route('/seats', methods=['GET', 'POST'])
 @login_required
 def seats():
     airlines = db.session.query(Seat.airline).distinct().all()
     if request.method == 'POST':
-        airline = \
-            request.form.get('airline')
-        seats = \
-            Seat.query.filter_by(airline=airline).all()
-        rows = \
-            db.session.query(Seat.row).distinct().filter_by(airline=airline).all()
-        columns = \
-            db.session.query(Seat.column).distinct().filter_by(airline=airline).all()
+        airline = request.form.get('airline')
+        reserved_seats = Seat.query.filter(Seat.status == 'reserved',Seat.airline == airline).all()
+        rows = db.session.query(Seat.row).distinct().filter_by(airline=airline).all()
+        columns = db.session.query(Seat.column).distinct().filter_by(airline=airline).all()
+        reserved_seats = {f'{seat.row}{seat.column}': seat.status for seat in reserved_seats}
     else:
         airlines = db.session.query(Seat.airline).distinct().all()
-        seats = []
+        reserved_seats = []
         rows = []
         columns = []
     return render_template(
         'booking/seats.html',
         airlines=airlines,
-        seats=seats,
+        reserved_seats=reserved_seats,
         rows=rows,
         columns=columns
     )
+
+@main.route('/reserve-seat', methods=['POST'])
+@login_required
+def reserve_seat():
+    data = request.get_json()
+    seat_id = data.get('seatId')
+    seat = Seat.query.filter_by(seat_id=seat_id).first()
+    seat.status = 'reserved'
+    db.session.commit()
+    return jsonify({'success': True})
 
 import logging
 

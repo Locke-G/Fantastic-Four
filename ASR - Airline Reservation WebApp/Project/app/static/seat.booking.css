@@ -1,0 +1,17 @@
+.seat {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #69dc1d;
+}
+
+.reserved {
+    text-decoration: line-through;
+    color: #ccc;
+    background-color: #e70d0d;
+}
+.selected {
+    background-color: #ffe740;
+}
