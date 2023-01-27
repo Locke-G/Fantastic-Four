@@ -95,18 +95,34 @@ def seats():
 @main.route('/reserve-seat', methods=['POST'])
 @login_required
 def reserve_seat():
-    seat_id = request.form.get('seat_id')
+    # Get's the input of reserved seat from User for the current
+    seat_id = request.form.get('seat_id').upper()
     airline = request.form.get('airline')
+    fullname = request.form.get('fullname')
     seat = Seat.query.filter_by(seat_id=seat_id, airline=airline).first()
+    # Checks if seat.status is already reserved
     if seat:
-        seat.status = 'reserved'
-        seat.name = current_user.name
-        db.session.commit()
-        flash('Seat reserved successfully')
-        return redirect(url_for('main.seats'))
+        if seat.status == 'reserved':
+            flash('Seat is already reserved. Please select a different one.')
+            return redirect(url_for('main.seats'))
+        # if not reserved seat gets reserved
+        else:
+            # if Optional name is entered that is used in the database
+            seat.status = 'reserved'
+            if fullname:
+                seat.name = fullname
+                seat.username = current_user.username
+            # if no name is given username from account is used
+            else:
+                seat.name = current_user.name
+                seat.username = current_user.username
+            db.session.commit()
+            flash('Seat reserved successfully')
+            return redirect(url_for('main.seats'))
     else:
         flash('Seat not found. Please try again')
         return redirect(url_for('main.seats'))
+
 
 import logging
 

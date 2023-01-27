@@ -16,6 +16,9 @@ class Seat(db.Model):
     column = db.Column(db.String(10))
     seat_id = db.Column(db.String(10))
     status = db.Column(db.String(10))
+    username = db.Column(db.String(100))
+    name = db.Column(db.String(1000))
+
     def serialize(self):
         return {
             'seat_id': self.seat_id,

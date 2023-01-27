@@ -33,7 +33,9 @@
     <form method="post" action="{{url_for('main.reserve_seat')}}">
         <input type="hidden" id="airline" name="airline" value="{{selected_airline}}">
         <label for="seat_id">Seat ID:</label>
-        <input type="text" id="seat_id" name="seat_id" required>
+        <input type="text" id="seat_id" name="seat_id" placeholder="Enter Seat ID from the table" required>
+        <label for="fullname">Enter Name if Seat isn't for current User:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Fullname (Optional)">
         <input type="submit" value="Reserve Seat">
     </form>
 {% endblock %}
