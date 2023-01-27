@@ -30,6 +30,35 @@
             </tr>
         {% endfor %}
     </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Seat ID</th>
+                <th>Username</th>
+                <th>Name</th>
+                <th>Cancel</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for seat_id, user in reserved_seats.items() %}
+                <tr>
+                    <td>{{ seat_id }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>
+                        <form method="post" action="{{url_for('main.cancel_reservation')}}">
+                            <input type="hidden" name="seat_id" value="{{ seat_id }}">
+                            <input type="submit" value="Cancel">
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+
     <form method="post" action="{{url_for('main.reserve_seat')}}">
         <input type="hidden" id="airline" name="airline" value="{{selected_airline}}">
         <label for="seat_id">Seat ID:</label>

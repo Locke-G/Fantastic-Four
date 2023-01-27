@@ -25,23 +25,6 @@ def create_app():
     login_manager.login_view = 'auth.login'
     login_manager.init_app(app)
 
-    # read textfile into list
-    #data_list = []
-    #with open( 'data/chartIn.txt') as f:
-    #    file_data = f.readlines()
-    #    for i in range(1, len(file_data)):
-    #        data_lists = file_data[i].replace('F\n', 'F').split("\t")
-    #        data_tuple = tuple(data_lists)
-    #        data_list.append(data_tuple)
-    # create cursor object
-    #cursor = db.cursor()
-    # create tablenames
-    #cursor.execute("create table df (row_number integer, window_A text,"
-    #               " middle_B text, aisle_C text, aisle_D text, middle_E text, middle_F text)")
-    # read data to df
-    #cursor.executemany('insert into df values (?,?,?,?,?,?,?)', data_list)
-    #db.commit()
-
     from .models import User
 
     @login_manager.user_loader
