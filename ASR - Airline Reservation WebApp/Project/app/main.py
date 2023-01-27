@@ -64,33 +64,49 @@ def upload():
 def seats():
     airlines = db.session.query(Seat.airline).distinct().all()
     if request.method == 'POST':
-        airline = request.form.get('airline')
-        reserved_seats = Seat.query.filter(Seat.status == 'reserved',Seat.airline == airline).all()
-        rows = db.session.query(Seat.row).distinct().filter_by(airline=airline).all()
-        columns = db.session.query(Seat.column).distinct().filter_by(airline=airline).all()
-        reserved_seats = {f'{seat.row}{seat.column}': seat.status for seat in reserved_seats}
+        airline = \
+            request.form.get('airline')
+        reserved_seats = \
+            Seat.query.filter(Seat.status == 'reserved',Seat.airline == airline).all()
+        rows = \
+            db.session.query(Seat.row).distinct().filter_by(airline=airline).all()
+        columns = \
+            db.session.query(Seat.column).distinct().filter_by(airline=airline).all()
+        reserved_seats = \
+            {f'{seat.row}{seat.column}': seat.status for seat in reserved_seats}
+        selected_airline = \
+            airline
     else:
         airlines = db.session.query(Seat.airline).distinct().all()
         reserved_seats = []
         rows = []
         columns = []
+        selected_airline = ""
     return render_template(
         'booking/seats.html',
         airlines=airlines,
         reserved_seats=reserved_seats,
         rows=rows,
-        columns=columns
+        columns=columns,
+        selected_airline=selected_airline
     )
+
 
 @main.route('/reserve-seat', methods=['POST'])
 @login_required
 def reserve_seat():
-    data = request.get_json()
-    seat_id = data.get('seatId')
-    seat = Seat.query.filter_by(seat_id=seat_id).first()
-    seat.status = 'reserved'
-    db.session.commit()
-    return jsonify({'success': True})
+    seat_id = request.form.get('seat_id')
+    airline = request.form.get('airline')
+    seat = Seat.query.filter_by(seat_id=seat_id, airline=airline).first()
+    if seat:
+        seat.status = 'reserved'
+        seat.name = current_user.name
+        db.session.commit()
+        flash('Seat reserved successfully')
+        return redirect(url_for('main.seats'))
+    else:
+        flash('Seat not found. Please try again')
+        return redirect(url_for('main.seats'))
 
 import logging
 

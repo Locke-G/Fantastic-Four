@@ -1,6 +1,12 @@
 {% extends "base.html" %}
-
 {% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+    {% endwith %}
     <form method="post">
     <label for="airline">Airline:</label>
     <select id="airline" name="airline">
@@ -15,26 +21,19 @@
             <tr>
                 {% for j in columns %}
                     <td>
-                        <div class="seat {% if reserved_seats.get(i[0]+j[0]) == 'reserved' %}reserved{% endif %}" id="{{i[0]}}{{j[0]}}">{{i[0]}}{{j[0]}}</div>
+                        <div
+                                class="seat {% if reserved_seats.get(i[0]+j[0]) == 'reserved' %}
+                                reserved{% endif %}" id="{{i[0]}}{{j[0]}}">{{i[0]}}{{j[0]}}
+                        </div>
                     </td>
                 {% endfor %}
             </tr>
         {% endfor %}
     </table>
-    <form method="post">
-        <input type="hidden" id="selectedSeat" name="selectedSeat" value="null">
-        <input type="submit" value="Confirm Selection">
+    <form method="post" action="{{url_for('main.reserve_seat')}}">
+        <input type="hidden" id="airline" name="airline" value="{{selected_airline}}">
+        <label for="seat_id">Seat ID:</label>
+        <input type="text" id="seat_id" name="seat_id" required>
+        <input type="submit" value="Reserve Seat">
     </form>
-    <script>
-        const seats = document.querySelectorAll('.seat');
-        const selectedSeat = document.getElementById('selectedSeat');
-
-        seats.forEach(seat => {
-            seat.addEventListener('click', event => {
-                seats.forEach(seat => seat.classList.remove('selected'));
-                event.target.classList.add('selected');
-                selectedSeat.value = event.target.id;
-            });
-        });
-    </script>
 {% endblock %}

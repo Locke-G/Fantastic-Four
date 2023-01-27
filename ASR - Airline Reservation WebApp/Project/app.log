@@ -722,3 +722,467 @@ INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:25:44] "POST /seats HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:25:44] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:25:56] "POST /seats HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:25:56] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:31:26] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:31:26] "GET /static/seat.booking.css HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-404-373
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:29] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:30] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:33] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:33] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:33] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:38] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:38] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:39] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:39] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:41] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:41] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:44] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:44] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:46] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:33:46] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:35:05] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:35:05] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:35:07] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:35:07] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:35:10] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:35:10] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-404-373
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:41:08] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:41:08] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:41:10] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:41:10] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:41:12] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:41:12] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:41:15] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:41:15] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-404-373
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:42:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:42:56] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:42:58] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:42:58] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:42:59] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:42:59] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:43:02] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:43:02] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:43:03] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:43:03] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-404-373
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-404-373
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:12] "[32mPOST /seats HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:12] "GET /login?next=%2Fseats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:12] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:15] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:16] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:16] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:17] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:18] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:18] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:20] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:20] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:21] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:45:21] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-404-373
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:39] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:39] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:41] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:41] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:41] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:45] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:45] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:45] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:46] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:46] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:48] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:48] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:50] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:50] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:52] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jan/2023 22:50:52] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:44] "[32mPOST /seats HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:44] "GET /login?next=%2Fseats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:44] "GET /static/seat.booking.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:48] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:48] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:49] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:49] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:50] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:51] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:54] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:54] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:56] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:43:56] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:44:15] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:44:15] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:44:20] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:44:20] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:44:26] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:44:26] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:44:54] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:44:54] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:45:25] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:45:25] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:45:25] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:46:10] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:46:10] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:46:12] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:46:12] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:46:13] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 08:46:13] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/models.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-404-373
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/models.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 825-404-373
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:12:51] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:12:51] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:28] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:28] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:30] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:30] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:31] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:31] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:37] "GET /upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:37] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:38] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:38] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:40] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:40] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:42] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:42] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:43] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:43] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:47] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:47] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:50] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 09:13:50] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 10:06:28] "[32mPOST /seats HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 10:06:28] "GET /login?next=%2Fseats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 10:06:28] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 537-618-047
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:23] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:27] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:27] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:28] "GET /signup HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:28] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:29] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:29] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:45] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:45] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:45] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:47] "[35m[1mGET /seats HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:47] "[36mGET /seats?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:47] "[36mGET /seats?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:13:47] "GET /seats?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:35] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:35] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:37] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:37] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:45] "POST /reserve-seat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:50] "POST /reserve-seat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:57] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:58] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:58] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:59] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:14:59] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:16:35] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:16:35] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:16:41] "POST /reserve-seat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:16:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:16:49] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:16:50] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:16:50] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:16:53] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:16:53] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:02] "POST /reserve-seat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:06] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:07] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:07] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:08] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:08] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:11] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:11] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:15] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:16] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:18] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:17:18] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 537-618-047
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:18:14] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:18:15] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:18:19] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:18:19] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:18:26] "POST /reserve-seat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:18:31] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:18:32] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:18:34] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 18:18:34] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 19:35:54] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 19:35:54] "GET /login?next=%2Flogout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 19:35:54] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 20:07:56] "GET /login?next=%2Flogout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Jan/2023 20:07:56] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:43] "GET /login?next=%2Flogout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:43] "GET /static/seat.booking.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:49] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:50] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:54] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:54] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:56] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:56] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:59] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:28:59] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 537-618-047
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:19] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:19] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:26] "[32mPOST /reserve-seat HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:26] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:26] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:27] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:28] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:32] "[32mPOST /reserve-seat HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:32] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:32] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:34] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:32:34] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 537-618-047
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:35:03] "[35m[1mPOST /reserve-seat HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:35:03] "GET /reserve-seat?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:35:03] "GET /reserve-seat?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:35:03] "GET /reserve-seat?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 537-618-047
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:35:57] "POST /reserve-seat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:35:57] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:36:01] "POST /reserve-seat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:36:01] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:36:07] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:36:08] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:36:10] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:36:10] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:36:16] "POST /reserve-seat HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:36:16] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 537-618-047
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:37:20] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:37:20] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:37:21] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:37:21] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:37:25] "[32mPOST /reserve-seat HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:37:25] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:37:26] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 537-618-047
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:40:57] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:40:57] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:41:00] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:41:01] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:41:03] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:41:03] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:41:10] "[32mPOST /reserve-seat HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:41:10] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:41:10] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:41:15] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:41:16] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 537-618-047
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:40] "[32mPOST /seats HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:40] "GET /login?next=%2Fseats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:40] "GET /static/seat.booking.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:47] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:47] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:49] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:49] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:50] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:50] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:54] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:51:54] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:52:03] "[32mPOST /reserve-seat HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:52:03] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:52:03] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:52:09] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:52:09] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:53:33] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:53:33] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:53:40] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:53:40] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:53:45] "[32mPOST /reserve-seat HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:53:45] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:53:45] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 537-618-047
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:57:19] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:57:19] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:57:21] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:57:21] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:57:28] "[32mPOST /reserve-seat HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:57:28] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:57:28] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:57:34] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:57:34] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:58:08] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:58:08] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:58:10] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:58:10] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:58:13] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:58:13] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:58:18] "[32mPOST /reserve-seat HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:58:18] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:58:19] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:58:24] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 08:58:24] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:00:48] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:00:48] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/gabrielgeissler/PycharmProjects/Fantastic-Four/ASR - Airline Reservation WebApp/Project/app/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 537-618-047
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:02:29] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:02:30] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:02:36] "[32mPOST /reserve-seat HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:02:36] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:02:36] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:03:42] "POST /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:03:42] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:03:45] "[32mPOST /reserve-seat HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:03:45] "GET /seats HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Jan/2023 09:03:45] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
