@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+     <div class="form-group">
+        <form method="post">
+        <label for="airline">Airline:</label>
+        <select id="airline" name="airline">
+            {% for airline in airlines %}
+                <option value="{{ airline[0] }}">{{ airline[0] }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Filter">
+        </form>
+    </div>
+
+    <h2 style="text-align: center;">Seat Cancelation</h2>
+    <h3 style="text-align: center;">Currently Selected Airline: {{selected_airline}}</h3>
+
+    <table id="reservation_table">
+      <thead>
+        <tr>
+          <th>Seat ID</th>
+          <th>Username</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for seat in can_reserved_seats %}
+          <tr>
+            <td>{{ seat.seat_id }}</td>
+            <td>{{ seat.username }}</td>
+            <td>{{ seat.name }}</td>
+            <td>
+              <form action="{{ url_for('main.delete_reservation', seat_id=seat.seat_id) }}" method="POST">
+                <input type="hidden" id="airline" name="airline" value="{{ selected_airline }}">
+                <input type="submit" value="Delete">
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}

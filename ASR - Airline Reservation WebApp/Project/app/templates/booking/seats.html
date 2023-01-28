@@ -7,16 +7,22 @@
             </div>
         {% endif %}
     {% endwith %}
-    <form method="post">
-    <label for="airline">Airline:</label>
-    <select id="airline" name="airline">
-        {% for airline in airlines %}
-            <option value="{{ airline[0] }}">{{ airline[0] }}</option>
-        {% endfor %}
-    </select>
-    <input type="submit" value="Filter">
-    </form>
-    <table>
+    <div class="form-group">
+        <form method="post">
+        <label for="airline">Airline:</label>
+        <select id="airline" name="airline">
+            {% for airline in airlines %}
+                <option value="{{ airline[0] }}">{{ airline[0] }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Filter">
+        </form>
+    </div>
+
+    <!-- table -->
+    <h2 style="text-align: center;">Seat Reservation</h2>
+    <h3 style="text-align: center;">Currently Selected Airline: {{selected_airline}}</h3>
+    <table class="Seatdata">
         {% for i in rows %}
             <tr>
                 {% for j in columns %}
@@ -31,40 +37,15 @@
         {% endfor %}
     </table>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Seat ID</th>
-                <th>Username</th>
-                <th>Name</th>
-                <th>Cancel</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for seat_id, user in reserved_seats.items() %}
-                <tr>
-                    <td>{{ seat_id }}</td>
-                    <td>{{ user.username }}</td>
-                    <td>{{ user.name }}</td>
-                    <td>
-                        <form method="post" action="{{url_for('main.cancel_reservation')}}">
-                            <input type="hidden" name="seat_id" value="{{ seat_id }}">
-                            <input type="submit" value="Cancel">
-                        </form>
-                    </td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
 
-
-
-    <form method="post" action="{{url_for('main.reserve_seat')}}">
-        <input type="hidden" id="airline" name="airline" value="{{selected_airline}}">
-        <label for="seat_id">Seat ID:</label>
-        <input type="text" id="seat_id" name="seat_id" placeholder="Enter Seat ID from the table" required>
-        <label for="fullname">Enter Name if Seat isn't for current User:</label>
-        <input type="text" id="fullname" name="fullname" placeholder="Fullname (Optional)">
-        <input type="submit" value="Reserve Seat">
-    </form>
+    <div class="form-group">
+        <form class="Seatdata" method="post" action="{{url_for('main.reserve_seat')}}">
+            <input type="hidden" id="airline" name="airline" value="{{selected_airline}}">
+            <label for="seat_id">Seat ID:</label>
+            <input type="text" id="seat_id" name="seat_id" placeholder="Enter Seat ID from table" required>
+            <label for="fullname">Enter Name if Seat isn't for current User:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Fullname (Optional)">
+            <input type="submit" value="Reserve Seat">
+        </form>
+    </div>
 {% endblock %}

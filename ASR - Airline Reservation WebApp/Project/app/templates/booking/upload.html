@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Upload File</h1>
+<h1 style="text-align: center;"> Upload File</h1>
   {% with messages = get_flashed_messages() %}
     {% if messages %}
         <ul class="flashes">
@@ -10,8 +10,10 @@
         </ul>
     {% endif %}
   {% endwith %}
-<form method="post" enctype="multipart/form-data">
-  <input type="file" name="file">
-  <input type="submit" value="Upload">
-</form>
+<div class="form-group">
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <input type="submit" value="Upload">
+    </form>
+<div>
 {% endblock %}

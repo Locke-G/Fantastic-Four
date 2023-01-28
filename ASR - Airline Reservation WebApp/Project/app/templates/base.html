@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='seat.booking.css')}}">
     <title>Flask Project</title>
@@ -12,49 +10,46 @@
 <body>
 <section class="hero is-fullheight" style="background-color:#5882fc;">
 
-    <div class="hero-head">
-        <nav class="navbar">
-            <div class="container">
-
-                <div id="navbarMenuHeroA" class="navbar-menu">
-                    <div class="navbar-end">
-                        <a href="{{ url_for('main.index') }}" class="navbar-item">
-                            Home
-                        </a>
-                        {% if current_user.is_authenticated %}
-                        <a href="{{ url_for('main.profile') }}" class="navbar-item">
-                            Profile
-                        </a>
-                        {% endif %}
-                        {% if current_user.is_authenticated and current_user.role == 'admin' %}
-                            <a href="{{ url_for('main.upload') }}" class="navbar-item">
-                                Upload
-                            </a>
-                        {% endif %}
-                        {% if current_user.is_authenticated %}
-                        <a href="{{ url_for('main.seats') }}" class="navbar-item">
-                            Booking
-                        </a>
-                        {% endif %}
-                        {% if not current_user.is_authenticated %}
-                        <a href="{{ url_for('auth.login') }}" class="navbar-item">
-                            Login
-                        </a>
-                        <a href="{{ url_for('auth.signup') }}" class="navbar-item">
-                            Sign Up
-                        </a>
-                        {% endif %}
-                        {% if current_user.is_authenticated %}
-                        <a href="{{ url_for('auth.logout') }}" class="navbar-item">
-                            Logout
-                        </a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </nav>
+<ul>
+    <div class="topnav">
+        <a href="{{ url_for('main.index') }}" class="navbar-item">
+            Home
+        </a>
+        {% if current_user.is_authenticated %}
+        <a href="{{ url_for('main.profile') }}" class="navbar-item">
+            Profile
+        </a>
+        {% endif %}
+        {% if current_user.is_authenticated and current_user.role == 'admin' %}
+            <a href="{{ url_for('main.upload') }}" class="navbar-item">
+                Upload
+            </a>
+        {% endif %}
+        {% if current_user.is_authenticated %}
+        <a href="{{ url_for('main.seats') }}" class="navbar-item">
+            Booking
+        </a>
+        {% endif %}
+        {% if current_user.is_authenticated and current_user.role == 'admin' %}
+        <a href="{{ url_for('main.cancel_reservation') }}" class="navbar-item">
+            Cancel Reservation
+        </a>
+        {% endif %}
+        {% if not current_user.is_authenticated %}
+        <a href="{{ url_for('auth.login') }}" class="navbar-item">
+            Login
+        </a>
+        <a href="{{ url_for('auth.signup') }}" class="navbar-item">
+            Sign Up
+        </a>
+        {% endif %}
+        {% if current_user.is_authenticated %}
+        <a href="{{ url_for('auth.logout') }}" class="navbar-item">
+            Logout
+        </a>
+        {% endif %}
     </div>
-
+</ul>
     <div class="hero-body">
         <div class="container has-text-centered">
             {% block content %}{% endblock %}
