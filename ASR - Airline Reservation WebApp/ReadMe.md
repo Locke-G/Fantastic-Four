@@ -11,12 +11,19 @@ in Georg-August-Universität Göttingen.
 - A web-based frontend
 - A computing backend implemented in Python
 
+## Motivation
+
+- Final Project of Course
+
 ## Features
 
 - Reading the seat chart from an txt file and displaying them
 - User Login/Signup/Logout with 4 Users one of which being an Admin
-- Displaying the seat in a
-- ...
+- Displaying seat chart and showing available seats
+- normal users can book a seat
+- admin user can cancel seats
+- admin user can see user information and statistics about available seats
+- a help float text is available for the main functions
 
 # Build the application
 
@@ -53,3 +60,21 @@ $ export FLASK_DEBUG=1
 ```sh
 $ flask run
 ```
+
+### Step 6 - Have fun!
+
+
+## API Reference
+https://flask.palletsprojects.com/en/2.2.x/#api-reference
+
+## Licence
+see Github licenceagreement.pdf
+
+
+
+
+
+
+
+
+
