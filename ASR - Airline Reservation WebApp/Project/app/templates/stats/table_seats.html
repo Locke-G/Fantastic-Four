@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Airlines</th>
+        <th>Reserved Seats</th>
+    </tr>
+    {% for airline, reserved in reserved_seats.items() %}
+    <tr>
+        <td>{{ airline }}</td>
+        <td>
+            <table>
+                <tr>
+                    <th>Seat ID</th>
+                    <th>Airline</th>
+                </tr>
+                {% for seat in reserved %}
+                <tr>
+                    <td>{{ seat.seat_id }}</td>
+                    <td>{{ seat.airline }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<table>
+    <tr>
+        <th>Airlines</th>
+        <th>Available Seats</th>
+    </tr>
+    {% for airline, available in available_seats.items() %}
+    <tr>
+        <td>{{ airline }}</td>
+        <td>
+            <table>
+                <tr>
+                    <th>Seat ID</th>
+                    <th>Airline</th>
+                </tr>
+                {% for seat in available %}
+                <tr>
+                    <td>{{ seat.seat_id }}</td>
+                    <td>{{ seat.airline }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

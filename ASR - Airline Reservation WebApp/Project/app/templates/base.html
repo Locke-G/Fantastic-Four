@@ -40,6 +40,11 @@
             Statistics
         </a>
         {% endif %}
+        {% if current_user.is_authenticated and current_user.role == 'admin' %}
+        <a href="{{ url_for('stats.tables') }}" class="navbar-item">
+            Seat Table
+        </a>
+        {% endif %}
         {% if not current_user.is_authenticated %}
         <a href="{{ url_for('auth.login') }}" class="navbar-item">
             Login
