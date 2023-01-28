@@ -72,6 +72,15 @@ def tables():
         available_seats[airline] = available
     return render_template("stats/table_seats.html", reserved_seats=reserved_seats, available_seats=available_seats)
 
+# create a new route for the user table
+@stats.route('/userinfo')
+def userinfo():
+    # query the User model to get all the data
+    users = User.query.all()
+    # pass the data to the template
+    return render_template('stats/Userinfo.html', users=users)
+
+
 
 
 
