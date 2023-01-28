@@ -146,10 +146,10 @@ def cancel_reservation():
     if request.method == 'POST':
         selected_airline = request.form.get('airline')
         reserved_seats = Seat.query.filter(Seat.status == 'reserved', Seat.airline == selected_airline).values(
-            Seat.seat_id, Seat.username, Seat.name)
+            Seat.seat_id, Seat.username, Seat.name, Seat.airline)
     else:
         selected_airline = None
-        reserved_seats = Seat.query.filter(Seat.status == 'reserved').values(Seat.seat_id, Seat.username, Seat.name)
+        reserved_seats = Seat.query.filter(Seat.status == 'reserved').values(Seat.seat_id, Seat.username, Seat.name, Seat.airline)
     return render_template('booking/cancel_reservation.html', can_reserved_seats=reserved_seats, airlines=airlines,
                            selected_airline=selected_airline)
 

@@ -6,6 +6,7 @@ from . import db
 from matplotlib import pyplot as plt
 import io
 import base64
+import numpy as np
 import pandas as pd
 
 stats = Blueprint('stats', __name__)
@@ -23,29 +24,36 @@ def role_required(role):
 @login_required
 @role_required('admin')
 def graph_seats():
-    global buf
     airlines = db.session.query(Seat.airline).distinct().all()
     airlines = [airline[0] for airline in airlines]
     reserved_seats = {}
     available_seats = {}
+    barwidth = 0.25
     for airline in airlines:
         reserved = Seat.query.filter(Seat.status == 'reserved', Seat.airline == airline).count()
         available = Seat.query.filter(Seat.status == 'available', Seat.airline == airline).count()
         reserved_seats[airline] = reserved
         available_seats[airline] = available
-    fig, ax = plt.subplots()
+    fig = plt.figure()
+    fig.set_size_inches(15.5, 10.5)
     plt.subplots_adjust(left=0.2, bottom=0.3)
-    ax.bar(reserved_seats.keys(), reserved_seats.values(), label="Reserved")
-    ax.bar(available_seats.keys(), available_seats.values(), label="Available")
-    ax.legend()
+    plt.subplot(1, 2, 1)
+    plt.bar(reserved_seats.keys(), reserved_seats.values(), width=barwidth ,label="Reserved", color='#e70d0d')
+    plt.legend()
+    plt.subplot(1, 2, 2)
+    plt.bar(available_seats.keys(), available_seats.values(), width=0.40 ,label="Available", color='#69dc1d')
+    #plt.xticks([airlines for airlines in airlines],rotation='vertical', fontsize=15)
+    plt.legend()
 
     # Create table
-    table_data = [['Airline', 'Reserved Seats', 'Available Seats']]
     cellText = []
     for airline, reserved in reserved_seats.items():
+        available_per = (available_seats[airline] / (available_seats[airline] + reserved_seats[airline]) )*100
         available = available_seats[airline]
-        cellText.append([airline, reserved, available])
-    table = ax.table(cellText=cellText, colLabels=["Airline", "Reserved", "Available"], loc='bottom')
+        reserved_per = (reserved_seats[airline] / (available_seats[airline] + reserved_seats[airline])) * 100
+        cellText.append([airline, reserved, round(reserved_per, 2),  round(available_per, 2), available])
+    table = plt.table(cellText=cellText, colLabels=["Airline", "Reserved", " Reserved [%]","Available [%]", "Available"]
+                      , loc='top')
     table.auto_set_font_size(False)
     table.set_fontsize(8)
     table.scale(1, 1.5)

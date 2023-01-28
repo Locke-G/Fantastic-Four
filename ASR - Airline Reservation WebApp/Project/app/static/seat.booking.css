@@ -6,10 +6,12 @@
       height: 100vh;
     }
 }
+
 .block {
     width: 100vw;
     height: 100vh;
 }
+
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -25,8 +27,8 @@
 }
 
 .topnav a:hover {
-  background-color: #9a2323;
-  color: black;
+  background-color: #2a57bd;
+  color: #000000;
 }
 
 .topnav a.active {
@@ -35,20 +37,21 @@
 }
 
 .bg-img {
-    background-image: url('airplane-paper-pixabay-2648958.jpg');
+    background-image: url('aircraft-1499171_1920-pixabay.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .seat {
-    width: 40px;
+    width: 60px;
     height: 40px;
     border: 1px solid black;
     text-align: center;
     padding-top: 10px;
     background-color: #69dc1d;
 }
+
 .Seatdata {
     margin-left: auto;
     margin-right: auto;
@@ -63,4 +66,28 @@ div.form-group {
     text-decoration: line-through;
     color: #ccc;
     background-color: #e70d0d;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

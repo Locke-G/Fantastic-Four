@@ -21,6 +21,7 @@
           <th>Seat ID</th>
           <th>Username</th>
           <th>Name</th>
+          <th>Airline</th>
         </tr>
       </thead>
       <tbody>
@@ -29,14 +30,19 @@
             <td>{{ seat.seat_id }}</td>
             <td>{{ seat.username }}</td>
             <td>{{ seat.name }}</td>
+            <td>{{ seat.airline }}</td>
             <td>
               <form action="{{ url_for('main.delete_reservation', seat_id=seat.seat_id) }}" method="POST">
                 <input type="hidden" id="airline" name="airline" value="{{ selected_airline }}">
-                <input type="submit" value="Delete">
+                <input type="submit"  value="Delete" onclick="return confirm('Are you sure want to delete the selected seat?')" />
               </form>
             </td>
           </tr>
         {% endfor %}
       </tbody>
     </table>
+
+<div class="tooltip">HELP ME
+  <span class="tooltiptext"> Choose a seat chart and click on filter. Now you can delete seats. </span>
+</div>
 {% endblock %}

@@ -45,7 +45,20 @@
             <input type="text" id="seat_id" name="seat_id" placeholder="Enter Seat ID from table" required>
             <label for="fullname">Enter Name if Seat isn't for current User:</label>
             <input type="text" id="fullname" name="fullname" placeholder="Fullname (Optional)">
-            <input type="submit" value="Reserve Seat">
+            <input type="submit" onclick="return confirm('Are you sure?')" />
         </form>
     </div>
+
+    <script>
+    function conformation() {
+      confirm("Press ok to confirm your selection.");
+    }
+    </script>
+
+<div class="tooltip">HELP ME
+  <span class="tooltiptext"> Select an airline and click on filter.
+      Then enter your preferred seat (the letters are case-insensitive) and the name
+      of the passenger if you book for another person.
+  </span>
+</div>
 {% endblock %}
