@@ -1,8 +1,15 @@
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+@media only screen and (min-width: 1800px) {
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      width: 100vw;
+      height: 100vh;
+    }
 }
-
+.block {
+    width: 100vw;
+    height: 100vh;
+}
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -27,6 +34,13 @@ body {
   color: white;
 }
 
+.bg-img {
+    background-image: url('airplane-paper-pixabay-2648958.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .seat {
     width: 40px;
     height: 40px;

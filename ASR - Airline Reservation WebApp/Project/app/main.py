@@ -140,6 +140,7 @@ def reserve_seat():
 
 @main.route('/cancel_reservation', methods=['POST', 'GET'])
 @login_required
+@role_required('admin')
 def cancel_reservation():
     airlines = db.session.query(Seat.airline).distinct().all()
     if request.method == 'POST':
@@ -154,6 +155,7 @@ def cancel_reservation():
 
 @main.route('/delete_reservation/<string:seat_id>', methods=['POST'])
 @login_required
+@role_required('admin')
 def delete_reservation(seat_id):
     selected_airline = request.form.get("airline")
     seat = Seat.query.filter_by(airline=selected_airline, seat_id=seat_id).first()
