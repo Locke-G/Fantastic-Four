@@ -5,6 +5,7 @@ flask_ckeditor
 flask_wtf
 flask_sqlalchemy
 sqlalchemy
+matplotlib
 pandas
 jinja2
 python-decouple
