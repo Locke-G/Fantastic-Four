@@ -13621,3 +13621,38 @@ INFO:werkzeug:127.0.0.1 - - [28/Jan/2023 09:40:53] "[36mGET /static/seat.bookin
 INFO:werkzeug:127.0.0.1 - - [28/Jan/2023 09:40:56] "[32mPOST /login HTTP/1.1[0m" 302 -
 INFO:werkzeug:127.0.0.1 - - [28/Jan/2023 09:40:56] "GET /profile HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [28/Jan/2023 09:40:56] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\gabri\\PycharmProjects\\Fantastic-Four\\ASR - Airline Reservation WebApp\\Project\\app\\stats.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+DEBUG:matplotlib:matplotlib data path: C:\Users\gabri\PycharmProjects\Fantastic-Four\ASR - Airline Reservation WebApp\Project\venv\lib\site-packages\matplotlib\mpl-data
+DEBUG:matplotlib:CONFIGDIR=C:\Users\gabri\.matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is win32
+DEBUG:matplotlib:CACHEDIR=C:\Users\gabri\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\gabri\.matplotlib\fontlist-v330.json
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 685-730-058
+INFO:werkzeug: * Detected change in 'C:\\Users\\gabri\\PycharmProjects\\Fantastic-Four\\ASR - Airline Reservation WebApp\\Project\\app\\stats.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:root:This is a debug message
+INFO:root:This is an info message
+WARNING:root:This is a warning message
+ERROR:root:This is an error message
+DEBUG:matplotlib:matplotlib data path: C:\Users\gabri\PycharmProjects\Fantastic-Four\ASR - Airline Reservation WebApp\Project\venv\lib\site-packages\matplotlib\mpl-data
+DEBUG:matplotlib:CONFIGDIR=C:\Users\gabri\.matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is win32
+DEBUG:matplotlib:CACHEDIR=C:\Users\gabri\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\gabri\.matplotlib\fontlist-v330.json
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 685-730-058
+INFO:werkzeug:127.0.0.1 - - [28/Jan/2023 09:46:20] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Jan/2023 09:46:21] "GET /static/seat.booking.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Jan/2023 09:46:21] "GET /userinfo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Jan/2023 09:46:21] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Jan/2023 09:46:25] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Jan/2023 09:46:25] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Jan/2023 09:46:25] "[36mGET /static/seat.booking.css HTTP/1.1[0m" 304 -
