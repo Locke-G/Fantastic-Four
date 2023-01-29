@@ -2,8 +2,6 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from datetime import timedelta
-import sqlite3
-import os
 
 # init SQLAlchemy so we can use it later in our models
 db = SQLAlchemy()
@@ -13,7 +11,7 @@ def create_app():
     app.config['SECRET_KEY'] = 'Wr5U92$&*68VoD29vbm4i!#m3#%&vq62@5UPN958%H!%f'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-    #app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=10)
+    app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=10)
     app.config['ALLOWED_EXTENSIONS'] = ['.txt']
     app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
     app.config['SQLALCHEMY_POOL_SIZE'] = 5

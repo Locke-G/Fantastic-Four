@@ -1,14 +1,12 @@
 flask
 flask_login
-flask_migrate
 flask_ckeditor
-flask_wtf
 flask_sqlalchemy
 sqlalchemy
 matplotlib
-pandas
 jinja2
 python-decouple
-email_validator
 Werkzeug
 datetime
+io
+base64
