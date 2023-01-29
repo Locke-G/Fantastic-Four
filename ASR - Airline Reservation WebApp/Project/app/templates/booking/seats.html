@@ -22,13 +22,13 @@
     <!-- table -->
     <h2 style="text-align: center;">Seat Reservation</h2>
     <h3 style="text-align: center;">Currently Selected Airline: {{selected_airline}}</h3>
-    <table class="Seatdata">
+    <table class="Seatbooking">
         {% for i in rows %}
             <tr>
                 {% for j in columns %}
                     <td>
                         <div
-                                class="seat {% if reserved_seats.get(i[0]+j[0]) == 'reserved' %}
+                                class="seat_booking {% if reserved_seats.get(i[0]+j[0]) == 'reserved' %}
                                 reserved{% endif %}" id="{{i[0]}}{{j[0]}}">{{i[0]}}{{j[0]}}
                         </div>
                     </td>
@@ -50,9 +50,7 @@
     </div>
 
     <script>
-    function conformation() {
-      confirm("Press ok to confirm your selection.");
-    }
+
     </script>
 
 <div class="tooltip">HELP ME

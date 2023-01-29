@@ -145,13 +145,33 @@ def cancel_reservation():
     airlines = db.session.query(Seat.airline).distinct().all()
     if request.method == 'POST':
         selected_airline = request.form.get('airline')
-        reserved_seats = Seat.query.filter(Seat.status == 'reserved', Seat.airline == selected_airline).values(
-            Seat.seat_id, Seat.username, Seat.name, Seat.airline)
+        reserved_seats = Seat.query.filter(
+            Seat.status == 'reserved',
+            Seat.airline == selected_airline
+        )\
+            .values(
+            Seat.seat_id,
+            Seat.username,
+            Seat.name,
+            Seat.airline
+        )
     else:
         selected_airline = None
-        reserved_seats = Seat.query.filter(Seat.status == 'reserved').values(Seat.seat_id, Seat.username, Seat.name, Seat.airline)
-    return render_template('booking/cancel_reservation.html', can_reserved_seats=reserved_seats, airlines=airlines,
-                           selected_airline=selected_airline)
+        reserved_seats = Seat.query.filter(
+            Seat.status == 'reserved'
+        )\
+            .values(
+            Seat.seat_id,
+            Seat.username,
+            Seat.name,
+            Seat.airline
+        )
+    return render_template(
+        'booking/cancel_reservation.html',
+        can_reserved_seats=reserved_seats,
+        airlines=airlines,
+        selected_airline=selected_airline
+    )
 
 @main.route('/delete_reservation/<string:seat_id>', methods=['POST'])
 @login_required

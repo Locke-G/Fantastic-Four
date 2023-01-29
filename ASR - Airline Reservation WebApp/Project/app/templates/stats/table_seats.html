@@ -1,56 +1,67 @@
 {% extends "base.html" %}
-
 {% block content %}
-<table>
+
+<style>
+    th,
+    td {
+        border: 1px solid #000000;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: rgba(187, 185, 185, 0.99);
+        font-weight: bold;
+    }
+
+    select {
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid #000000;
+        font-size: 14px;
+    }
+</style>
+
+
+<table class="Seatdata">
     <tr>
-        <th>Airlines</th>
-        <th>Reserved Seats</th>
-    </tr>
-    {% for airline, reserved in reserved_seats.items() %}
-    <tr>
-        <td>{{ airline }}</td>
-        <td>
-            <table>
-                <tr>
-                    <th>Seat ID</th>
-                    <th>Airline</th>
-                </tr>
-                {% for seat in reserved %}
-                <tr>
-                    <td>{{ seat.seat_id }}</td>
-                    <td>{{ seat.airline }}</td>
-                </tr>
+        <th>Seat ID</th>
+        <th>
+            Airline
+            <select id="airline-filter">
+                <option value="">All</option>
+                {% for airline in airlines %}
+                <option value="{{ airline }}">{{ airline }}</option>
                 {% endfor %}
-            </table>
-        </td>
+            </select>
+        </th>
+        <th>
+            Status
+            <select id="status-filter">
+                <option value="">All</option>
+                <option value="reserved">Reserved</option>
+                <option value="available">Available</option>
+            </select>
+        </th>
+    </tr>
+</table>
+
+
+<table class="Seatdata">
+    <tr>
+        <th>Seat ID</th>
+        <th>Airline</th>
+        <th>Status</th>
+    </tr>
+    {% for seat in seats %}
+    <tr class="seat">
+        <td>{{ seat.seat_id }}</td>
+        <td class="airline">{{ seat.airline }}</td>
+        <td class="status">{{ seat.status }}</td>
     </tr>
     {% endfor %}
 </table>
 
-<table>
-    <tr>
-        <th>Airlines</th>
-        <th>Available Seats</th>
-    </tr>
-    {% for airline, available in available_seats.items() %}
-    <tr>
-        <td>{{ airline }}</td>
-        <td>
-            <table>
-                <tr>
-                    <th>Seat ID</th>
-                    <th>Airline</th>
-                </tr>
-                {% for seat in available %}
-                <tr>
-                    <td>{{ seat.seat_id }}</td>
-                    <td>{{ seat.airline }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-        </td>
-    </tr>
-    {% endfor %}
-</table>
+<script src="/static/table_seats_stats_filter.js"></script>
 
 {% endblock %}

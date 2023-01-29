@@ -69,16 +69,13 @@ def graph_seats():
 @login_required
 @role_required('admin')
 def tables():
+    seats = Seat.query.all()
     airlines = db.session.query(Seat.airline).distinct().all()
     airlines = [airline[0] for airline in airlines]
-    reserved_seats = {}
-    available_seats = {}
-    for airline in airlines:
-        reserved = Seat.query.filter(Seat.status == 'reserved', Seat.airline == airline).all()
-        available = Seat.query.filter(Seat.status == 'available', Seat.airline == airline).all()
-        reserved_seats[airline] = reserved
-        available_seats[airline] = available
-    return render_template("stats/table_seats.html", reserved_seats=reserved_seats, available_seats=available_seats)
+    statuses = db.session.query(Seat.status).distinct().all()
+    statuses = [status[0] for status in statuses]
+    return render_template("stats/table_seats.html", seats=seats, airlines=airlines, statuses=statuses)
+
 
 # create a new route for the user table
 @stats.route('/userinfo')

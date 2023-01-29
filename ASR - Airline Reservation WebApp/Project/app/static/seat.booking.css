@@ -31,19 +31,19 @@
   color: #000000;
 }
 
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
 .bg-img {
-    background-image: url('aircraft-1499171_1920-pixabay.jpg');
+    background-image: url('airplane-1632598_1920-picxabay.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-.seat {
+.Seatbooking {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seat_booking {
     width: 60px;
     height: 40px;
     border: 1px solid black;
@@ -52,26 +52,62 @@
     background-color: #69dc1d;
 }
 
-.Seatdata {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-div.form-group {
-    display: block;
-    text-align: center;
-}
-
 .reserved {
     text-decoration: line-through;
     color: #ccc;
     background-color: #e70d0d;
 }
+div.form-group {
+    display: block;
+    text-align: center;
+}
+
+table.Seatdata {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 0 auto;
+}
+.Userdata_table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+.Userdata_table th,
+.Userdata_table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #000000;
+}
+.Userdata_table th {
+    background-color: rgba(187, 185, 185, 0.99);
+    font-weight: bold;
+}
+table.SeatCancel{
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid black;
+  }
+.SeatCancel th,
+.SeatCancel td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #000000;
+}
+.SeatCancel th {
+    background-color: rgba(187, 185, 185, 0.99);
+    font-weight: bold;
+}
+
 
 .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+  width: 90px;
+  height: 30px;
+  border:   1px solid #000000;
+  padding-top: 10px;
+  text-align: center;
+  text-size: 17px;
+  font-weight: bold;
+  background-color: coral;
 }
 
 .tooltip .tooltiptext {
@@ -82,8 +118,6 @@ div.form-group {
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-
-  /* Position the tooltip */
   position: absolute;
   z-index: 1;
 }
