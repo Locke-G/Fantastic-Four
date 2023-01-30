@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-     <div class="form-group">
+
+    <div>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul>
+        {% for category, message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+      {% endwith %}
+    </div>
+
+     <div class="Seatbooking_Airline">
         <form method="post">
         <label for="airline">Airline:</label>
         <select id="airline" name="airline">
@@ -8,7 +21,7 @@
                 <option value="{{ airline[0] }}">{{ airline[0] }}</option>
             {% endfor %}
         </select>
-        <input type="submit" value="Filter">
+        <input type="submit" value="Select">
         </form>
     </div>
 

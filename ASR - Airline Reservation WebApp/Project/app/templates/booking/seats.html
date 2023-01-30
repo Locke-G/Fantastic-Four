@@ -1,57 +1,59 @@
 {% extends "base.html" %}
 {% block content %}
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <div class="notification is-danger">
-                {{ messages[0] }}
-            </div>
-        {% endif %}
-    {% endwith %}
-    <div class="form-group">
-        <form method="post">
-        <label for="airline">Airline:</label>
-        <select id="airline" name="airline">
-            {% for airline in airlines %}
-                <option value="{{ airline[0] }}">{{ airline[0] }}</option>
-            {% endfor %}
-        </select>
-        <input type="submit" value="Filter">
-        </form>
-    </div>
 
-    <!-- table -->
-    <h2 style="text-align: center;">Seat Reservation</h2>
-    <h3 style="text-align: center;">Currently Selected Airline: {{selected_airline}}</h3>
-    <table class="Seatbooking">
-        {% for i in rows %}
-            <tr>
-                {% for j in columns %}
-                    <td>
-                        <div
-                                class="seat_booking {% if reserved_seats.get(i[0]+j[0]) == 'reserved' %}
-                                reserved{% endif %}" id="{{i[0]}}{{j[0]}}">{{i[0]}}{{j[0]}}
-                        </div>
-                    </td>
-                {% endfor %}
-            </tr>
+<div class="flash-messages">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul>
+        {% for category, message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
         {% endfor %}
-    </table>
+    </ul>
+    {% endif %}
+  {% endwith %}
+</div>
+
+<div class="Seatbooking_Airline">
+    <form method="post">
+    <label for="airline">Airline:</label>
+    <select id="airline" name="airline">
+        {% for airline in airlines %}
+            <option value="{{ airline[0] }}">{{ airline[0] }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Select">
+    </form>
+</div>
+
+<!-- table -->
+<h2 style="text-align: center;">Seat Reservation</h2>
+<h3 style="text-align: center;">Currently Selected Airline: {{selected_airline}}</h3>
+<table class="Seatbooking_seats">
+    {% for i in rows %}
+        <tr>
+            {% for j in columns %}
+                <td>
+                    <div
+                            class="seat_booking {% if reserved_seats.get(i[0]+j[0]) == 'reserved' %}
+                            reserved{% endif %}" id="{{i[0]}}{{j[0]}}">{{i[0]}}{{j[0]}}
+                    </div>
+                </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
 
 
-    <div class="form-group">
-        <form class="Seatdata" method="post" action="{{url_for('main.reserve_seat')}}">
-            <input type="hidden" id="airline" name="airline" value="{{selected_airline}}">
-            <label for="seat_id">Seat ID:</label>
-            <input type="text" id="seat_id" name="seat_id" placeholder="Enter Seat ID from table" required>
-            <label for="fullname">Enter Name if Seat isn't for current User:</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Fullname (Optional)">
-            <input type="submit" onclick="return confirm('Are you sure?')" />
-        </form>
-    </div>
-
-    <script>
-
-    </script>
+<div class="Seatbooking_select">
+    <form class="Seatdata" method="post" action="{{url_for('main.reserve_seat')}}">
+        <input type="hidden" id="airline" name="airline" value="{{selected_airline}}">
+        <label for="seat_id">Seat ID:</label>
+        <input type="text" id="seat_id" name="seat_id" placeholder="Enter Seat ID from table" required>
+        <label for="fullname">Enter name if seat not for current user.:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Fullname (Optional)">
+        <input type="submit" onclick="return confirm('Are you sure?')" />
+    </form>
+</div>
 
 <div class="tooltip">HELP ME
   <span class="tooltiptext"> Select an airline and click on filter.

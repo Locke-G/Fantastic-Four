@@ -17,9 +17,9 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password, password):
             login_user(user, remember=remember)
-            return redirect(url_for('main.profile'))
+            return redirect(url_for('main.seats'))
         else:
-            flash('Invalid login credentials')
+            flash('Invalid login credentials', 'error')
     return render_template('auth/login.html')
 
 
@@ -34,11 +34,11 @@ def signup():
         password2 = request.form.get('password2')
         # Check if email or username is already taken
         if User.query.filter_by(email=email).first():
-            flash('Email address already exists')
+            flash('Email address already exists', 'error')
         elif User.query.filter_by(username=username).first():
-            flash('Username already exists')
+            flash('Username already exists', 'error')
         elif password != password2:
-            flash('Passwords must match')
+            flash('Passwords must match', 'error')
         else:
             # Create a new user and add it to the database
             new_user = User(
@@ -48,7 +48,7 @@ def signup():
                             )
             db.session.add(new_user)
             db.session.commit()
-            flash('Signup successful, please log in.')
+            flash('Signup successful, please log in.', 'success')
             return redirect(url_for('auth.login'))
     return render_template('auth/signup.html')
 
@@ -57,5 +57,5 @@ def signup():
 @login_required
 def logout():
     logout_user()
-    flash('Successfully logged out. Hope to see you soon')
+    flash('Successfully logged out. Hope to see you soon', 'success')
     return redirect(url_for('auth.login'))

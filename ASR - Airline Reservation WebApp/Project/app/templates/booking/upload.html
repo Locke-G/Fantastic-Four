@@ -1,16 +1,22 @@
 {% extends "base.html" %}
+
 {% block content %}
-<h1 style="text-align: center;"> Upload File</h1>
-  {% with messages = get_flashed_messages() %}
+
+<div class="flash-messages">
+  {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
-        <ul class="flashes">
-        {% for message in messages %}
-            <li>{{ message }}</li>
+    <ul>
+        {% for category, message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
         {% endfor %}
-        </ul>
+    </ul>
     {% endif %}
   {% endwith %}
-<div class="form-group">
+</div>
+
+
+<h1 style="text-align: center;"> Upload File</h1>
+<div class="Upload">
     <form method="post" enctype="multipart/form-data">
       <input type="file" name="file">
       <input type="submit" value="Upload">

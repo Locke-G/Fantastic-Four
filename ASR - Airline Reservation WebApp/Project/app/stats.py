@@ -31,7 +31,7 @@ def graph_seats():
     airlines = db.session.query(Seat.airline).distinct().all()
     airlines = [airline[0] for airline in airlines]
 
-    # Get number of reserved and available seats for each airline
+    # Get number of reserved and available seats for each airline and save them as a dictionary
     reserved_seats = {}
     available_seats = {}
     for airline in airlines:
@@ -58,9 +58,14 @@ def graph_seats():
         available_per = (available_seats[airline] / (available_seats[airline] + reserved_seats[airline])) * 100
         available = available_seats[airline]
         reserved_per = (reserved_seats[airline] / (available_seats[airline] + reserved_seats[airline])) * 100
-        cellText.append([airline, reserved, round(reserved_per, 2), round(available_per, 2), available])
-    table = plt.table(cellText=cellText, colLabels=["Airline", "Reserved", " Reserved [%]","Available [%]", "Available"]
-                      , loc='top')
+        cellText.append([airline, reserved, round(reserved_per, 2), available, round(available_per, 2)])
+    table = plt.table(cellText=cellText, colLabels=[
+        "Airline",
+        "Reserved",
+        "Reserved [%]",
+        "Available",
+        "Available [%]"
+    ], loc='top')
     table.auto_set_font_size(False)
     table.set_fontsize(8)
     table.scale(1, 1.5)

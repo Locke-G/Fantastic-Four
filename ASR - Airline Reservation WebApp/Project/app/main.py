@@ -43,16 +43,16 @@ def upload():
     if request.method == 'POST':
         # Check if file was submitted
         if 'file' not in request.files:
-            flash('No file part')
+            flash('No file part', 'error')
             return redirect(request.url)
         file = request.files['file']
         if file.filename == '':
-            flash('No selected file')
+            flash('No selected file', 'error')
             return redirect(request.url)
 
         # Check file extension
         if not file or '.txt' not in file.filename:
-            flash('File type not supported')
+            flash('File type not supported', 'error')
             return redirect(request.url)
 
         # Save the file
@@ -77,7 +77,7 @@ def upload():
                     )
                     db.session.add(seat)
             db.session.commit()
-        flash('File uploaded and processed')
+        flash('File uploaded and processed', 'success')
         return redirect(url_for('main.upload'))
     return render_template('booking/upload.html')
 
@@ -132,7 +132,7 @@ def reserve_seat():
     if seat:
         # Check if the seat is already reserved
         if seat.status == 'reserved':
-            flash('Seat is already reserved. Please select a different one.')
+            flash('Seat is already reserved. Please select a different one.', 'error')
             return redirect(url_for('main.seats'))
         # Reserve the seat
         else:
@@ -145,10 +145,10 @@ def reserve_seat():
                 seat.name = current_user.name
                 seat.username = current_user.username
             db.session.commit()
-            flash('Seat reserved successfully')
+            flash('Seat reserved successfully', 'success')
             return redirect(url_for('main.seats'))
     else:
-        flash('Seat not found. Please try again')
+        flash('Seat not found. Please try again', 'error')
         return redirect(url_for('main.seats'))
 
 # Route to cancel reservation
@@ -211,12 +211,12 @@ def delete_reservation(seat_id):
         seat.status = 'available'
         seat.name = None
         seat.username = None
-
+        flash("Reservation was canceled", 'success')
         # Commit changes to the database
         db.session.commit()
     else:
         # Seat not found, flash a message
-        flash("Seat not found")
+        flash("Seat not found", 'error',)
 
     # Redirect to the cancel_reservation page
     return redirect(url_for('main.cancel_reservation'))
