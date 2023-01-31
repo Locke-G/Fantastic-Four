@@ -11,7 +11,7 @@ def create_app():
     app.config['SECRET_KEY'] = 'Wr5U92$&*68VoD29vbm4i!#m3#%&vq62@5UPN958%H!%f'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-    #app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=10)
+    #app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(seconds=3)
     app.config['ALLOWED_EXTENSIONS'] = ['.txt']
     app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024
     app.config['SQLALCHEMY_POOL_SIZE'] = 5
@@ -44,3 +44,7 @@ def create_app():
     app.register_blueprint(stats_blueprint)
 
     return app
+
+# The following sites were used as references and guides to build this application
+# realpython.com; www.digitalocean.com and www.w3schools.com
+# As well as the provided Materials in the course

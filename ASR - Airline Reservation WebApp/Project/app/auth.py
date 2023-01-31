@@ -41,11 +41,8 @@ def signup():
             flash('Passwords must match', 'error')
         else:
             # Create a new user and add it to the database
-            new_user = User(
-                email=email, username=username, name=name,
-                password=generate_password_hash(password, method='sha256'),
-                role='user'
-                            )
+            new_user = User(email=email, username=username, name=name,
+                password=generate_password_hash(password, method='sha256'), role='user')
             db.session.add(new_user)
             db.session.commit()
             flash('Signup successful, please log in.', 'success')

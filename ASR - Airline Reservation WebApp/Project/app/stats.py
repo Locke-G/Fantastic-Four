@@ -60,12 +60,8 @@ def graph_seats():
         reserved_per = (reserved_seats[airline] / (available_seats[airline] + reserved_seats[airline])) * 100
         cellText.append([airline, reserved, round(reserved_per, 2), available, round(available_per, 2)])
     table = plt.table(cellText=cellText, colLabels=[
-        "Airline",
-        "Reserved",
-        "Reserved [%]",
-        "Available",
-        "Available [%]"
-    ], loc='top')
+        "Airline", "Reserved", "Reserved [%]", "Available", "Available [%]"], loc='top'
+                      )
     table.auto_set_font_size(False)
     table.set_fontsize(8)
     table.scale(1, 1.5)

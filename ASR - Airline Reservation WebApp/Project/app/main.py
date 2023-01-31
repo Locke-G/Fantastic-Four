@@ -3,7 +3,7 @@ import logging
 from flask import Blueprint,render_template, request, redirect, flash, url_for
 from flask_login import login_required, current_user
 from functools import wraps
-from .models import Seat, User
+from .models import Seat
 from . import db
 
 # Blueprint definition for main module
@@ -69,12 +69,8 @@ def upload():
                     row = int(seat_id[:-1])
                     column = seat_id[-1]
                     seat = Seat(
-                        seat_id=seat_id,
-                        status='available',
-                        airline=root,
-                        row=row,
-                        column=column
-                    )
+                        seat_id=seat_id, status='available',
+                        airline=root, row=row, column=column)
                     db.session.add(seat)
             db.session.commit()
         flash('File uploaded and processed', 'success')
@@ -112,13 +108,8 @@ def seats():
         selected_airline = ""
     # Render the seats.html template
     return render_template(
-        'booking/seats.html',
-        airlines=airlines,
-        reserved_seats=reserved_seats,
-        rows=rows,
-        columns=columns,
-        selected_airline=selected_airline
-    )
+        'booking/seats.html', airlines=airlines, reserved_seats=reserved_seats,
+        rows=rows, columns=columns, selected_airline=selected_airline)
 
 @main.route('/reserve-seat', methods=['POST'])
 @login_required
@@ -166,13 +157,9 @@ def cancel_reservation():
 
         # Get all reserved seats for the selected airline
         reserved_seats = Seat.query.filter(
-            Seat.status == 'reserved',
-            Seat.airline == selected_airline
+            Seat.status == 'reserved', Seat.airline == selected_airline
         ).values(
-            Seat.seat_id,
-            Seat.username,
-            Seat.name,
-            Seat.airline
+            Seat.seat_id, Seat.username, Seat.name, Seat.airline
         )
     else:
         # No airline selected, get all reserved seats
@@ -180,19 +167,12 @@ def cancel_reservation():
         reserved_seats = Seat.query.filter(
             Seat.status == 'reserved'
         ).values(
-            Seat.seat_id,
-            Seat.username,
-            Seat.name,
-            Seat.airline
+            Seat.seat_id, Seat.username, Seat.name, Seat.airline
         )
 
     # Render the cancel_reservation.html template with the seat information
-    return render_template(
-        'booking/cancel_reservation.html',
-        can_reserved_seats=reserved_seats,
-        airlines=airlines,
-        selected_airline=selected_airline
-    )
+    return render_template('booking/cancel_reservation.html', can_reserved_seats=reserved_seats,
+        airlines=airlines, selected_airline=selected_airline)
 
 # Route to delete a reservation
 @main.route('/delete_reservation/<string:seat_id>', methods=['POST'])

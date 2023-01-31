@@ -187,7 +187,7 @@ h3 {
 table.Seatdata {
     width: 60%;
     border-collapse: collapse;
-    background-color: ghostwhite;
+    background-color: lightblue;
     margin: 0 auto;
 }
 .Userdata_table {
@@ -199,7 +199,7 @@ table.Seatdata {
 .Userdata_table td {
     padding: 8px;
     text-align: left;
-    background-color: ghostwhite;
+    background-color: lightblue;
     border: 1px solid #000000;
 }
 .Userdata_table th {
@@ -215,7 +215,7 @@ table.SeatCancel{
 .SeatCancel td {
     padding: 8px;
     text-align: center;
-    background-color: ghostwhite;
+    background-color: lightblue;
     border: 1px solid #000000;
 }
 .SeatCancel th {
